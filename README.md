@@ -149,8 +149,8 @@ Description: Ask CloudWalk questions using Retrieval-Augmented Generation.
 
 ### Example input:
 
-./ip-op/input.png
+./cloudwalk-rag-mcp/ip-op/input.png
 
 ### Example output:
 
-./ip-op/output.png
+./cloudwalk-rag-mcp0/ip-op/output.png
