@@ -145,3 +145,12 @@ python -m app.mcp_server
 
 Tool Name: cloudwalk_rag_query  
 Description: Ask CloudWalk questions using Retrieval-Augmented Generation.
+
+
+### Example input:
+
+./ip-op/input.png
+
+### Example output:
+
+./ip-op/output.png
