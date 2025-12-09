@@ -1,0 +1,140 @@
+:root {
+    --bg-color: #121212;
+    --chat-bg: #1e1e1e;
+    --primary-color: #00ff88;
+    --text-color: #e0e0e0;
+    --user-msg-bg: #2d2d2d;
+    --bot-msg-bg: #1a1a1a;
+    --border-color: #333;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+.chat-container {
+    width: 100%;
+    max-width: 800px;
+    background-color: var(--chat-bg);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+header {
+    padding: 20px;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+}
+
+.status-indicator {
+    font-size: 0.8rem;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    padding: 2px 8px;
+    border-radius: 12px;
+}
+
+.chat-history {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.message {
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+    padding: 12px 16px;
+    border-radius: 8px;
+    line-height: 1.5;
+}
+
+.message.user {
+    align-self: flex-end;
+    background-color: var(--user-msg-bg);
+    border-bottom-right-radius: 2px;
+}
+
+.message.bot {
+    align-self: flex-start;
+    background-color: var(--bot-msg-bg);
+    border-bottom-left-radius: 2px;
+    border: 1px solid var(--border-color);
+}
+
+.message.system {
+    align-self: center;
+    background-color: transparent;
+    color: #666;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.sources {
+    margin-top: 8px;
+    font-size: 0.75rem;
+    color: #888;
+    border-top: 1px solid #333;
+    padding-top: 4px;
+}
+
+.input-area {
+    padding: 20px;
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    gap: 10px;
+}
+
+input {
+    flex: 1;
+    padding: 12px;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-color);
+    color: white;
+    outline: none;
+}
+
+input:focus {
+    border-color: var(--primary-color);
+}
+
+button {
+    padding: 10px 24px;
+    background-color: var(--primary-color);
+    color: black;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+button:disabled {
+    background-color: #444;
+    cursor: not-allowed;
+}
